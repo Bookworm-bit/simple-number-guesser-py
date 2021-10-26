@@ -6,6 +6,10 @@ number = random.randint(parameterSmall, parameterLarge)
 print("Welcome to guess my number! My number is between", parameterSmall, "and", parameterLarge, "Your guess is:")
 guess = input("\n")
 
+while(guess == ""):
+    print("That is an invalid input!")
+    guess = input("Try Again!:\n")
+
 while (int(guess) != number):
     if (int(guess) < number):
         print("Too small!")
